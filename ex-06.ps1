@@ -8,7 +8,7 @@ Connect-Ucs -Name 198.18.133.91
 # Add a VLAN
 Get-UcsLanCloud | Add-UcsVlan -Name CiscoLive -Id 500
 
-# Add an Organizatoin
+# Add an Organization
 $ucsOrg = Add-UcsOrg -Name CiscoLiveOrg
 Add-UcsServiceProfile –Org $ucsOrg -Name CiscoLiveSP
 Add-UcsBootPolicy –Org $ucsOrg -Name CL_BP -RebootOnUpdate yes -BootMode legacy | Add-UcsLsbootVirtualMedia -ModifyPresent -Access "read-only-local" -LunId "0" -Order 1
