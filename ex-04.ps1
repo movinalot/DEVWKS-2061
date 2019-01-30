@@ -5,7 +5,7 @@ Import-Module Cisco.UCSManager
 
 Connect-Ucs -Name 198.18.133.91
 
-Get-UcsVlan | Select Dn, SwitchId, Id
+Get-UcsVlan | Select-Object Dn, SwitchId, Id
 
 Get-UcsCmdletMeta -Noun Vlan
 Get-UcsCmdletMeta -Noun UcsVlan

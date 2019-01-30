@@ -8,3 +8,5 @@ Connect-Ucs -Name 198.18.133.91
 $DefaultUcs
 
 Get-UcsPsSession
+
+Disconnect-Ucs

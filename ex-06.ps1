@@ -19,3 +19,5 @@ Get-UcsServiceProfile -Name CiscoLiveSP
 
 Get-UcsOrg -Name CiscoLiveOrg | Get-UcsBootPolicy -Name CL_BP | Remove-UcsBootPolicy -Force
 Get-UcsServiceProfile -Name CiscoLiveSP
+
+Disconnect-Ucs
