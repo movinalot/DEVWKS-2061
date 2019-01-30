@@ -1,6 +1,10 @@
 # ex-06.ps1
 # Configure
 
+Import-Module Cisco.UCSManager
+
+Connect-Ucs -Name 198.18.133.91
+
 # Add a VLAN
 Get-UcsLanCloud | Add-UcsVlan -Name CiscoLive -Id 500
 

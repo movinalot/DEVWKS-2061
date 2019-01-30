@@ -1,5 +1,9 @@
 # ex-07.ps1
 # Transactions
+Import-Module Cisco.UCSManager
+
+Connect-Ucs -Name 198.18.133.91
+
 $ucsLanCloud = Get-UcsLanCloud
 
 Start-UcsTransaction
@@ -13,3 +17,5 @@ Complete-UcsTransaction
 Start-UcsTransaction
 Get-UcsVlan | ?{$_.id -ge 102 -and $_.id -le 120} | Remove-UcsVlan -Force | Out-Null
 Complete-UcsTransaction | Out-Null
+
+Disconnect-Ucs

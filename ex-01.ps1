@@ -1,5 +1,8 @@
 # ex_01.ps1
 # Connect
+
+Import-Module Cisco.UCSManager
+
 Connect-Ucs -Name 198.18.133.91
 Get-UcsPSSession
 Get-help Connect-Ucs
@@ -11,3 +14,5 @@ Get-UcsBlade -Xml
 
 # Get Cmdlets are Class Based but can retrieve a Single Object 
 Get-UcsBlade -Dn sys/chassis-3/blade-1 -Xml | Select-Object Dn, Serial, Model
+
+Disconnect-Ucs

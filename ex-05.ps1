@@ -1,5 +1,7 @@
 # ex_05.ps1
 # Metadata
+$vlan_meta = Get-UcsCmdletMeta -ClassId FabricVlan
+
 $vlan_meta.MoMeta
 $vlan_meta.MoMeta.PropertyMeta
 $vlan_meta.MoMeta.PropertyMeta[9].Restriction
