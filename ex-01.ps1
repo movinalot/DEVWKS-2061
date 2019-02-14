@@ -1,11 +1,15 @@
-# ex_01.ps1
-# Connect
+<# ex-01.ps1
+
+Purpose:
+    UCS Manager connect and query example
+Author:
+    John McDonough (jomcdono@cisco.com) github: (@movinalot)
+    Cisco Systems, Inc.
+#>
 
 Import-Module Cisco.UCSManager
 
 Connect-Ucs -Name 198.18.133.91
-Get-UcsPSSession
-Get-help Connect-Ucs
 
 # Query UCS Manager
 Get-UcsBlade
